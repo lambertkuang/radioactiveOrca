@@ -1,50 +1,65 @@
-<div class="landing-cont">
-  <div class="landing col-xs-12 col-sm-6 col-sm-offset-3">
+<ion-view view-title="Landing">
+  <ion-content class="padding">
 
-    <div class="header col-xs-12"><h1>Movie <i class="dash">DASH</i></h1></div>
-    <div class="modality col-md-6 col-xs-12">
-      <label>Travel Mode</label>
-      <select class="form-control" ng-model="modality">
-        <option value="driving">Driving</option>
-        <option value="walking">Walking</option>
-        <option value="bicycling">Biking</option>
-        <option value="transit">Public Transportation</option>
-      </select>
-    </div>
+    <div class="landing-cont">
+      <div class="landing">
 
-    <div class="leaving col-md-6 col-xs-12">
-      <label>Departure Time</label>
-      <select class="form-control" ng-model="leavingTime">
-        <option value="0">Now</option>
-        <option value="1800000">in 30 minutes</option>
-        <option value="3600000">in 1 hour</option>
-        <option value="7200000">in 2 hours</option>
-      </select>
-    </div>
+        <div class="header"><h1>Movie <i class="dash">DASH</i></h1>
+        </div>
+        
+        <div class="list">
+          <label class="item item-input item-select">
+            <div class="input-label">
+              Travel Mode
+            </div>
+            <select class="form-control" ng-model="modality">
+              <option value="driving">Driving</option>
+              <option value="walking">Walking</option>
+              <option value="bicycling">Biking</option>
+              <option value="transit">Public Transportation</option>
+            </select>
+          </label>
 
-    <div class="button col-xs-12">
-      <button type="button" class="btn form-control btn-info button" ng-click="findLocation()">Use Current Location</button>
-    </div>
+          <label class="item item-input item-select">
+            <div class="input-label">
+              Departure Time
+            </div>
+            <select class="form-control" ng-model="leavingTime">
+              <option value="0">Now</option>
+              <option value="1800000">in 30 minutes</option>
+              <option value="3600000">in 1 hour</option>
+              <option value="7200000">in 2 hours</option>
+            </select>
+          </label>          
+        </div>    
 
-    <div class="divider col-xs-12">
-      <div class="or">
-        <span class="circle-background">OR</span>
-      </div>
-    </div>
+        <button type="button" class="button button-positive" ng-click="findLocation()">Use Current Location</button>
+        
+        
 
-    <!-- shows form when geolocation errors out -->
-    <div class="zipcode col-xs-12">
-      <form name="zipCode" ng-submit="zipSubmit()">
-        <input ng-model="zip" type="tel" pattern="([1-9])+(?:-?\d){4,}" placeholder="Enter your zipcode" class="form-control" required>
-        <!-- disables button if input is not valid -->
-        <div class="button zip-code-submit ">
-          <button class="btn btn-info form-control button" ng-disabled="zipCode.$invalid">Go</button>
+        <div class="divider">
+          <div class="or">
+            <span class="circle-background">OR</span>
+          </div>
         </div>
 
-      </form>
-    </div>
-    <center><img class="landing-message spiffy" ng-if="isLoading" src="../../Assets/spiffygif_46x46.gif"><center>
-    <div class="landing-message" ng-if="error">{{error}}</div>
-  </div>
+        <!-- shows form when geolocation errors out -->
+        <div class="zipcode">
 
-</div>
+          <label class="item item-input">
+            <form name="zipCode">
+              <span class="input-label">Zipcode</span>
+              <input ng-model="zip" type="tel" pattern="([1-9])+(?:-?\d){4,}" placeholder="Enter your zipcode" class="" required>
+              <button on-tap="zipSubmit()" class="button button-positive" ng-disabled="zipCode.$invalid">Go</button>
+            </form>
+          </label>
+        </div>
+
+        <center><img class="landing-message spiffy" ng-if="isLoading" src="../img/spiffygif_46x46.gif"><center>
+        <div class="landing-message" ng-if="error">{{error}}</div>
+      </div>
+
+    </div>
+
+  </ion-content>
+</ion-view>
