@@ -1,0 +1,25 @@
+<div class="movie-panel container" ng-controller="MoviesCtrl">
+  <center>
+    <h1>Watch This:</h1>
+    <h3>Leaving at {{getLeaveTime()}}</h3>
+  </center>
+  <div class="movie-container col-sm-4 col-xs-12" ng-class="{'final-row': isFinalRow($index, movies.length)}"ng-repeat="movie in movies | orderBy: 'dateObjectShowTime'">
+    <!-- Movie Poster -->
+    <img ng-if="movie.poster !== 'N/A'"  ng-click="selectMovie(movie)"  class="movie-container__poster center-block img-rounded img-responsive" ng-src="{{movie.poster}}"/>
+    <img class="movie-container__poster center-block img-rounded img-responsive"  ng-click="selectMovie(movie)"  ng-if="movie.poster === 'N/A'" ng-src="../../Assets/default-poster.png">
+    <!-- End Movie Poster -->
+    <div class="movie-snippet text-center">
+      <h2>{{movie.movieName | limitTo: 30}}</h2>
+      <p class="text-muted">{{movie.theaterName}}</p>
+      <p><strong>Travel Time:</strong> {{movie.transitTime}}</p>
+
+      <h4>
+        <strong>Showtime:</strong> {{movie.showTime}} <small class="text-muted">({{localShowtime(movie.showTime) | timeFromNow}})</small>
+      </h4>
+    </div>
+
+      <div>
+        <button class="btn btn-trailer btn-primary" ng-disabled="{{ movie.trailerLink === false }}" ng-click="showTrailer(movie)">Show Trailer</button>
+      </div>
+  </div>
+</div>
