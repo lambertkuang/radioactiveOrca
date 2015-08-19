@@ -14,7 +14,7 @@ app.factory('MovieClient', ['$http', 'selected', function($http, selected) {
     return $http({
       method: 'POST',
       data: query,
-      url: 'http://movie-dash.herokuapp.com/api/movies',
+      url: 'http://localhost:8080/api/movies',
       success: function(response) {
          return response;
       },
