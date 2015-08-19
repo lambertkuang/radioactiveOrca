@@ -1,0 +1,200 @@
+0 info it worked if it ends with ok
+1 verbose cli [ 'node', '/usr/local/bin/npm', 'install' ]
+2 info using npm@2.12.1
+3 info using node@v0.12.7
+4 verbose node symlink /usr/local/bin/node
+5 verbose readDependencies loading dependencies from /Users/JK/Codes/radioactiveOrca/package.json
+6 verbose install where, deps [ '/Users/JK/Codes/radioactiveOrca',
+6 verbose install   [ 'body-parser',
+6 verbose install     'bower',
+6 verbose install     'expect.js',
+6 verbose install     'express',
+6 verbose install     'grunt',
+6 verbose install     'grunt-cli',
+6 verbose install     'grunt-contrib-concat',
+6 verbose install     'grunt-contrib-jshint',
+6 verbose install     'grunt-contrib-uglify',
+6 verbose install     'grunt-contrib-watch',
+6 verbose install     'grunt-karma',
+6 verbose install     'grunt-mocha-test',
+6 verbose install     'grunt-nodemon',
+6 verbose install     'grunt-notify',
+6 verbose install     'grunt-shell',
+6 verbose install     'mocha',
+6 verbose install     'mongoose',
+6 verbose install     'q',
+6 verbose install     'request',
+6 verbose install     'showtimes',
+6 verbose install     'tzwhere',
+6 verbose install     'url-parse',
+6 verbose install     'jasmine-core',
+6 verbose install     'karma',
+6 verbose install     'karma-chrome-launcher',
+6 verbose install     'karma-jasmine',
+6 verbose install     'karma-nyan-reporter' ] ]
+7 verbose install where, peers [ '/Users/JK/Codes/radioactiveOrca', [] ]
+8 verbose installManyTop reading for lifecycle /Users/JK/Codes/radioactiveOrca/package.json
+9 info preinstall moviedash@1.0.0
+10 verbose installManyTop reading scoped package data from /Users/JK/Codes/radioactiveOrca/node_modules/body-parser/package.json
+11 verbose installManyTop reading scoped package data from /Users/JK/Codes/radioactiveOrca/node_modules/bower/package.json
+12 verbose installManyTop reading scoped package data from /Users/JK/Codes/radioactiveOrca/node_modules/expect.js/package.json
+13 verbose installManyTop reading scoped package data from /Users/JK/Codes/radioactiveOrca/node_modules/express/package.json
+14 verbose installManyTop reading scoped package data from /Users/JK/Codes/radioactiveOrca/node_modules/grunt/package.json
+15 verbose installManyTop reading scoped package data from /Users/JK/Codes/radioactiveOrca/node_modules/grunt-cli/package.json
+16 verbose installManyTop reading scoped package data from /Users/JK/Codes/radioactiveOrca/node_modules/grunt-contrib-concat/package.json
+17 verbose installManyTop reading scoped package data from /Users/JK/Codes/radioactiveOrca/node_modules/grunt-contrib-jshint/package.json
+18 verbose installManyTop reading scoped package data from /Users/JK/Codes/radioactiveOrca/node_modules/grunt-contrib-uglify/package.json
+19 verbose installManyTop reading scoped package data from /Users/JK/Codes/radioactiveOrca/node_modules/grunt-contrib-watch/package.json
+20 verbose installManyTop reading scoped package data from /Users/JK/Codes/radioactiveOrca/node_modules/grunt-karma/package.json
+21 verbose installManyTop reading scoped package data from /Users/JK/Codes/radioactiveOrca/node_modules/grunt-mocha-test/package.json
+22 verbose installManyTop reading scoped package data from /Users/JK/Codes/radioactiveOrca/node_modules/grunt-nodemon/package.json
+23 verbose installManyTop reading scoped package data from /Users/JK/Codes/radioactiveOrca/node_modules/grunt-notify/package.json
+24 verbose installManyTop reading scoped package data from /Users/JK/Codes/radioactiveOrca/node_modules/grunt-shell/package.json
+25 verbose installManyTop reading scoped package data from /Users/JK/Codes/radioactiveOrca/node_modules/jasmine-core/package.json
+26 verbose installManyTop reading scoped package data from /Users/JK/Codes/radioactiveOrca/node_modules/karma/package.json
+27 verbose installManyTop reading scoped package data from /Users/JK/Codes/radioactiveOrca/node_modules/karma-chrome-launcher/package.json
+28 verbose installManyTop reading scoped package data from /Users/JK/Codes/radioactiveOrca/node_modules/karma-jasmine/package.json
+29 verbose installManyTop reading scoped package data from /Users/JK/Codes/radioactiveOrca/node_modules/karma-nyan-reporter/package.json
+30 verbose installManyTop reading scoped package data from /Users/JK/Codes/radioactiveOrca/node_modules/mocha/package.json
+31 verbose installManyTop reading scoped package data from /Users/JK/Codes/radioactiveOrca/node_modules/mongoose/package.json
+32 verbose installManyTop reading scoped package data from /Users/JK/Codes/radioactiveOrca/node_modules/q/package.json
+33 verbose installManyTop reading scoped package data from /Users/JK/Codes/radioactiveOrca/node_modules/request/package.json
+34 verbose installManyTop reading scoped package data from /Users/JK/Codes/radioactiveOrca/node_modules/showtimes/package.json
+35 verbose installManyTop reading scoped package data from /Users/JK/Codes/radioactiveOrca/node_modules/tzwhere/package.json
+36 verbose installManyTop reading scoped package data from /Users/JK/Codes/radioactiveOrca/node_modules/url-parse/package.json
+37 info package.json bower@1.4.1 No license field.
+38 info package.json expect.js@0.3.1 No license field.
+39 info package.json grunt@0.4.5 No license field.
+40 info package.json grunt-cli@0.1.13 No license field.
+41 info package.json grunt-contrib-concat@0.5.1 No license field.
+42 info package.json grunt-contrib-jshint@0.11.2 No license field.
+43 info package.json grunt-contrib-uglify@0.9.1 No license field.
+44 info package.json grunt-contrib-watch@0.6.1 No license field.
+45 info package.json grunt-mocha-test@0.12.7 No license field.
+46 info package.json grunt-notify@0.4.1 No license field.
+47 info package.json karma-nyan-reporter@0.2.2 license should be a valid SPDX license expression
+48 info package.json q@1.4.1 license should be a valid SPDX license expression
+49 info package.json showtimes@1.7.0 No license field.
+50 info package.json tzwhere@1.0.0 No license field.
+51 verbose readDependencies loading dependencies from /Users/JK/Codes/radioactiveOrca/package.json
+52 verbose targetResolver reading package data from /Users/JK/Codes/radioactiveOrca/node_modules/body-parser/package.json
+53 verbose targetResolver reading package data from /Users/JK/Codes/radioactiveOrca/node_modules/bower/package.json
+54 verbose targetResolver reading package data from /Users/JK/Codes/radioactiveOrca/node_modules/expect.js/package.json
+55 verbose targetResolver reading package data from /Users/JK/Codes/radioactiveOrca/node_modules/express/package.json
+56 verbose targetResolver reading package data from /Users/JK/Codes/radioactiveOrca/node_modules/grunt/package.json
+57 verbose targetResolver reading package data from /Users/JK/Codes/radioactiveOrca/node_modules/grunt-cli/package.json
+58 verbose targetResolver reading package data from /Users/JK/Codes/radioactiveOrca/node_modules/grunt-contrib-concat/package.json
+59 verbose targetResolver reading package data from /Users/JK/Codes/radioactiveOrca/node_modules/grunt-contrib-jshint/package.json
+60 verbose targetResolver reading package data from /Users/JK/Codes/radioactiveOrca/node_modules/grunt-contrib-uglify/package.json
+61 verbose targetResolver reading package data from /Users/JK/Codes/radioactiveOrca/node_modules/grunt-contrib-watch/package.json
+62 verbose targetResolver reading package data from /Users/JK/Codes/radioactiveOrca/node_modules/grunt-karma/package.json
+63 verbose targetResolver reading package data from /Users/JK/Codes/radioactiveOrca/node_modules/grunt-mocha-test/package.json
+64 verbose targetResolver reading package data from /Users/JK/Codes/radioactiveOrca/node_modules/grunt-nodemon/package.json
+65 verbose targetResolver reading package data from /Users/JK/Codes/radioactiveOrca/node_modules/grunt-notify/package.json
+66 verbose targetResolver reading package data from /Users/JK/Codes/radioactiveOrca/node_modules/grunt-shell/package.json
+67 verbose targetResolver reading package data from /Users/JK/Codes/radioactiveOrca/node_modules/jasmine-core/package.json
+68 verbose targetResolver reading package data from /Users/JK/Codes/radioactiveOrca/node_modules/karma/package.json
+69 verbose targetResolver reading package data from /Users/JK/Codes/radioactiveOrca/node_modules/karma-chrome-launcher/package.json
+70 verbose targetResolver reading package data from /Users/JK/Codes/radioactiveOrca/node_modules/karma-jasmine/package.json
+71 verbose targetResolver reading package data from /Users/JK/Codes/radioactiveOrca/node_modules/karma-nyan-reporter/package.json
+72 verbose targetResolver reading package data from /Users/JK/Codes/radioactiveOrca/node_modules/mocha/package.json
+73 verbose targetResolver reading package data from /Users/JK/Codes/radioactiveOrca/node_modules/mongoose/package.json
+74 verbose targetResolver reading package data from /Users/JK/Codes/radioactiveOrca/node_modules/q/package.json
+75 verbose targetResolver reading package data from /Users/JK/Codes/radioactiveOrca/node_modules/request/package.json
+76 verbose targetResolver reading package data from /Users/JK/Codes/radioactiveOrca/node_modules/showtimes/package.json
+77 verbose targetResolver reading package data from /Users/JK/Codes/radioactiveOrca/node_modules/tzwhere/package.json
+78 verbose targetResolver reading package data from /Users/JK/Codes/radioactiveOrca/node_modules/url-parse/package.json
+79 verbose targetResolver reading package data from /Users/JK/Codes/radioactiveOrca/node_modules/.bin/grunt/package.json
+80 verbose targetResolver reading package data from /Users/JK/Codes/radioactiveOrca/node_modules/.bin/mocha/package.json
+81 verbose already installed skipping grunt-contrib-uglify@^0.9.1 /Users/JK/Codes/radioactiveOrca
+82 verbose already installed skipping grunt-contrib-watch@^0.6.1 /Users/JK/Codes/radioactiveOrca
+83 verbose already installed skipping grunt-karma@^0.12.0 /Users/JK/Codes/radioactiveOrca
+84 verbose already installed skipping grunt-mocha-test@^0.12.7 /Users/JK/Codes/radioactiveOrca
+85 verbose already installed skipping grunt-nodemon@^0.4.0 /Users/JK/Codes/radioactiveOrca
+86 verbose already installed skipping grunt-notify@^0.4.1 /Users/JK/Codes/radioactiveOrca
+87 verbose already installed skipping grunt-shell@^1.1.2 /Users/JK/Codes/radioactiveOrca
+88 verbose already installed skipping mocha@^2.2.5 /Users/JK/Codes/radioactiveOrca
+89 verbose already installed skipping mongoose@^4.1.1 /Users/JK/Codes/radioactiveOrca
+90 verbose already installed skipping q@^1.4.1 /Users/JK/Codes/radioactiveOrca
+91 verbose already installed skipping request@^2.60.0 /Users/JK/Codes/radioactiveOrca
+92 verbose already installed skipping showtimes@^1.7.0 /Users/JK/Codes/radioactiveOrca
+93 verbose already installed skipping tzwhere@^1.0.0 /Users/JK/Codes/radioactiveOrca
+94 verbose already installed skipping url-parse@^1.0.2 /Users/JK/Codes/radioactiveOrca
+95 verbose already installed skipping jasmine-core@^2.3.4 /Users/JK/Codes/radioactiveOrca
+96 verbose already installed skipping karma@^0.13.7 /Users/JK/Codes/radioactiveOrca
+97 verbose already installed skipping karma-chrome-launcher@^0.2.0 /Users/JK/Codes/radioactiveOrca
+98 verbose already installed skipping karma-jasmine@^0.3.6 /Users/JK/Codes/radioactiveOrca
+99 verbose already installed skipping karma-nyan-reporter@^0.2.2 /Users/JK/Codes/radioactiveOrca
+100 verbose already installed skipping body-parser@^1.13.3 /Users/JK/Codes/radioactiveOrca
+101 verbose already installed skipping bower@^1.4.1 /Users/JK/Codes/radioactiveOrca
+102 verbose already installed skipping expect.js@^0.3.1 /Users/JK/Codes/radioactiveOrca
+103 verbose already installed skipping express@^4.13.3 /Users/JK/Codes/radioactiveOrca
+104 verbose already installed skipping grunt@^0.4.5 /Users/JK/Codes/radioactiveOrca
+105 verbose already installed skipping grunt-cli@^0.1.13 /Users/JK/Codes/radioactiveOrca
+106 verbose already installed skipping grunt-contrib-concat@^0.5.1 /Users/JK/Codes/radioactiveOrca
+107 verbose already installed skipping grunt-contrib-jshint@^0.11.2 /Users/JK/Codes/radioactiveOrca
+108 silly install resolved []
+109 info build /Users/JK/Codes/radioactiveOrca
+110 info linkStuff moviedash@1.0.0
+111 silly linkStuff moviedash@1.0.0 has /Users/JK/Codes as its parent node_modules
+112 verbose linkBins moviedash@1.0.0
+113 verbose linkMans moviedash@1.0.0
+114 verbose rebuildBundles moviedash@1.0.0
+115 verbose rebuildBundles [ '.bin',
+115 verbose rebuildBundles   'body-parser',
+115 verbose rebuildBundles   'bower',
+115 verbose rebuildBundles   'expect.js',
+115 verbose rebuildBundles   'express',
+115 verbose rebuildBundles   'grunt',
+115 verbose rebuildBundles   'grunt-cli',
+115 verbose rebuildBundles   'grunt-contrib-concat',
+115 verbose rebuildBundles   'grunt-contrib-jshint',
+115 verbose rebuildBundles   'grunt-contrib-uglify',
+115 verbose rebuildBundles   'grunt-contrib-watch',
+115 verbose rebuildBundles   'grunt-karma',
+115 verbose rebuildBundles   'grunt-mocha-test',
+115 verbose rebuildBundles   'grunt-nodemon',
+115 verbose rebuildBundles   'grunt-notify',
+115 verbose rebuildBundles   'grunt-shell',
+115 verbose rebuildBundles   'jasmine-core',
+115 verbose rebuildBundles   'karma',
+115 verbose rebuildBundles   'karma-chrome-launcher',
+115 verbose rebuildBundles   'karma-jasmine',
+115 verbose rebuildBundles   'karma-nyan-reporter',
+115 verbose rebuildBundles   'mocha',
+115 verbose rebuildBundles   'mongoose',
+115 verbose rebuildBundles   'q',
+115 verbose rebuildBundles   'request',
+115 verbose rebuildBundles   'showtimes',
+115 verbose rebuildBundles   'tzwhere',
+115 verbose rebuildBundles   'url-parse' ]
+116 info install moviedash@1.0.0
+117 info postinstall moviedash@1.0.0
+118 verbose unsafe-perm in lifecycle true
+119 info moviedash@1.0.0 Failed to exec postinstall script
+120 verbose stack Error: moviedash@1.0.0 postinstall: `bash ./post_install.sh`
+120 verbose stack Exit status 3
+120 verbose stack     at EventEmitter.<anonymous> (/usr/local/lib/node_modules/npm/lib/utils/lifecycle.js:213:16)
+120 verbose stack     at EventEmitter.emit (events.js:110:17)
+120 verbose stack     at ChildProcess.<anonymous> (/usr/local/lib/node_modules/npm/lib/utils/spawn.js:24:14)
+120 verbose stack     at ChildProcess.emit (events.js:110:17)
+120 verbose stack     at maybeClose (child_process.js:1015:16)
+120 verbose stack     at Process.ChildProcess._handle.onexit (child_process.js:1087:5)
+121 verbose pkgid moviedash@1.0.0
+122 verbose cwd /Users/JK/Codes/radioactiveOrca
+123 error Darwin 14.4.0
+124 error argv "node" "/usr/local/bin/npm" "install"
+125 error node v0.12.7
+126 error npm  v2.12.1
+127 error code ELIFECYCLE
+128 error moviedash@1.0.0 postinstall: `bash ./post_install.sh`
+128 error Exit status 3
+129 error Failed at the moviedash@1.0.0 postinstall script 'bash ./post_install.sh'.
+129 error This is most likely a problem with the moviedash package,
+129 error not with npm itself.
+129 error Tell the author that this fails on your system:
+129 error     bash ./post_install.sh
+129 error You can get their info via:
+129 error     npm owner ls moviedash
+129 error There is likely additional logging output above.
+130 verbose exit [ 1, true ]
