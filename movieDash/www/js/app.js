@@ -13,7 +13,8 @@ angular.module('moviedash', [
   'moviedash.services',
   'ui.router',
   'ngMap',
-  'ui.bootstrap'
+  'ui.bootstrap',
+  'ionic-timepicker'
   ])
 
 .run(function($ionicPlatform) {
