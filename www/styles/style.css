@@ -1,0 +1,181 @@
+body {
+  font-family: Droid Sans;
+}
+
+h1 {
+
+  font-family: Paytone One;
+
+}
+
+a {
+  color: #46b8da;
+}
+
+label {
+  text-transform: uppercase;
+  padding-bottom: 15px;
+
+}
+
+.landing-cont h1 {
+  font-size: 2.7em;
+  letter-spacing: 2px;
+  text-align: center;
+  padding-bottom: 20px;
+  border-bottom: 1px dotted;
+  margin-bottom: 30px;
+  font-family: Paytone One;
+  font-weight: 400;
+  text-transform: uppercase;
+}
+
+.landing-cont {
+  background: url('../Assets/background copy.jpg');
+  background-size: cover;
+  height: 100vh;
+  width: 100vw;
+}
+
+.landing {
+  background: #ffffff;
+  position: relative;
+  top: 20vh;
+  padding: 50px;
+  padding-bottom: 90px;
+  font-size: 1.15em;
+  /*box-shadow: inset 0 0 10px 3px #333;*/
+}
+
+.landing .btn {
+  font-weight: 500;
+  font-size: 16px;
+}
+
+.landing-message {
+  position: relative;
+  top: 30px;
+  height: 50px;
+}
+
+.dash {
+  color: #46b8da;
+}
+
+.or {
+  font-size: 1em;
+  text-transform: uppercase;
+  font-weight: 700;
+  font-style: italic;
+  color: #fff;
+  margin-top: 40px;
+  margin-bottom: 40px;
+  text-align: center;
+
+
+}
+
+.circle-background {
+  background-color: #333;
+  border-radius: 100%;
+  padding-left: 14px;
+  padding-top: 15px;
+  padding-bottom: 15px;
+  padding-right: 15px;
+
+}
+
+select {
+  margin-bottom: 20px;
+}
+
+
+.button {
+  height: 2.5em;
+  font-size: inherit;
+}
+
+.zip-code-submit {
+  padding-top: 20px;
+}
+
+.movie-panel {
+  margin-top: 20px;
+}
+
+.details-panel {
+  margin-bottom: 20px;
+  margin-top: 20px;
+}
+
+.route-info {
+  margin-top: 40px;
+}
+
+.movie-container {
+  height: 550px;
+  margin-bottom: 50px;
+  position: relative;
+  padding-bottom: 50px;
+  border-bottom-width: 1px;
+  border-bottom-style: solid;
+  border-bottom-color: gray;
+}
+
+.movie-container__poster {
+  cursor: hand;
+  cursor: pointer;
+  max-height: 50%;
+}
+
+.movie-container.final-row {
+  border-bottom-style: none; 
+}
+
+.btn-trailer {
+  width: 200px;
+  position: absolute;
+  bottom: 25px;
+  left: 0;
+  right:0;
+  margin-left: auto;
+  margin-right: auto;
+  text-transform: uppercase;
+}
+
+.modal-body {
+  position: relative;
+  width: 100%;
+  height: 100%;
+  padding: 30%;
+}
+
+.modal-body iframe {
+  position: absolute;
+  margin: 0 auto;
+  width: 90%;
+  height: 60%;
+  left: 5%;
+  top: 20%;
+}
+
+.movie-info {
+  position: relative;
+}
+
+.reminder-btn {
+}
+
+@media screen and (max-width: 768px) {
+  .landing {
+    top: 0;
+  }
+  body{
+    width:100%;
+    height:100%;
+    overflow-x: hidden;
+  }
+  .movie-container {
+    border-bottom-style: none;
+  }
+}

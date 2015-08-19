@@ -1,0 +1,28 @@
+{
+  "name": "moviedashclient",
+  "version": "0.0.1",
+  "homepage": "https://github.com/radioactiveOrca/radioactiveOrca.git",
+  "authors": [
+    "radioactiveOrca"
+  ],
+  "main": "index.html",
+  "license": "MIT",
+  "ignore": [
+    "**/.*",
+    "node_modules",
+    "bower_components",
+    "test",
+    "tests"
+  ],
+  "dependencies": {
+    "angular": "~1.4.3",
+    "angular-ui-router": "~0.2.15",
+    "bootstrap": "~3.3.5",
+    "angular-mocks": "~1.4.3",
+    "ngmap": "~1.10.0",
+    "angular-bootstrap": "~0.13.3"
+  },
+  "devDependencies": {
+    "ionic": "driftyco/ionic-bower#1.1.0"
+  }
+}
