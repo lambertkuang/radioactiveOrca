@@ -4,7 +4,6 @@ app.controller('LandingCtrl', ['$scope', '$location', 'MovieClient', '$http',
   function ($scope, $location, MovieClient, $http) {
     $scope.modality = "driving";
 
-
     // do a lot of Date finagling
     var rightNow = new Date();
     var midnight = rightNow.toString().split(" ");
@@ -15,6 +14,7 @@ app.controller('LandingCtrl', ['$scope', '$location', 'MovieClient', '$http',
 
     // time from the ionic-timepicker module
     $scope.slots = {epochTime: elapsedTime, format: 12, step: 15};
+
     // prettify for user experience
     var prettyHour = Math.floor($scope.slots.epochTime/1000/60/60%60);
     if (prettyHour > 12) {
@@ -86,6 +86,7 @@ app.controller('LandingCtrl', ['$scope', '$location', 'MovieClient', '$http',
     var sendQuery = function(lat, long) {
       console.log(lat, long);
       $scope.location = lat + ', ' + long;
+
       var leavingMS = Date.parse(midnight) + $scope.slots.epochTime * 1000;
       $scope.query = {
         location: $scope.location,
