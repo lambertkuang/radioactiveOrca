@@ -10,7 +10,6 @@ app.controller('LandingCtrl', ['$scope', '$location', 'MovieClient', '$http',
       $scope.error = null;
       $scope.isLoading = true;
       if (!navigator.geolocation) {
-        console.log('no geolocation');
         $scope.error= "Geolocation is not supported by your browser. Please enter your zipcode.";
       }
 
