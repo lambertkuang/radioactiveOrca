@@ -6,7 +6,7 @@
 
         <div class="header"><h1>Movie <i class="dash">DASH</i></h1>
         </div>
-        
+
         <div class="list">
           <label class="item item-input item-select">
             <div class="input-label">
@@ -30,12 +30,12 @@
               <option value="3600000">in 1 hour</option>
               <option value="7200000">in 2 hours</option>
             </select>
-          </label>          
-        </div>    
+          </label>
+        </div>
 
         <button type="button" class="button button-positive" ng-click="findLocation()">Use Current Location</button>
-        
-        
+
+
 
         <div class="divider">
           <div class="or">
@@ -55,7 +55,7 @@
           </label>
         </div>
 
-        <center><img class="landing-message spiffy" ng-if="isLoading" src="../img/spiffygif_46x46.gif"><center>
+        <center><img class="landing-message spiffy" ng-if="isLoading" src="img/spiffygif_46x46.gif"><center>
         <div class="landing-message" ng-if="error">{{error}}</div>
       </div>
 
