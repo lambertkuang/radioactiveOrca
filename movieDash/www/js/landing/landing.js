@@ -3,7 +3,28 @@ var app = angular.module('moviedash.landing', []);
 app.controller('LandingCtrl', ['$scope', '$location', 'MovieClient', '$http',
   function ($scope, $location, MovieClient, $http) {
     $scope.modality = "driving";
-    $scope.leavingTime = "0";
+
+    // do a lot of Date finagling
+    var rightNow = new Date();
+    var midnight = rightNow.toString().split(" ");
+    midnight = midnight.splice(1, 3);
+    midnight.push("00:00:00");
+    midnight = midnight.join(' ');
+    debugger;
+    var elapsedTime = Date.parse(rightNow) - Date.parse(midnight);
+
+    // time from the ionic-timepicker module
+    $scope.slots = {epochTime: elapsedTime, format: 12, step: 15};
+
+    // again from ionic-timepicker module
+    $scope.timePickerCallback = function (val) {
+      if (typeof (val) === 'undefined') {
+        console.log('Time not selected');
+      } else {
+        console.log('Selected time is : ', val);    // `val` will contain the selected time in epoch
+      }
+    };
+
 
     //Checks if geolocation is available, shows form if not
     $scope.findLocation = function() {
@@ -47,8 +68,11 @@ app.controller('LandingCtrl', ['$scope', '$location', 'MovieClient', '$http',
     };
 
     var sendQuery = function(lat, long) {
+      console.log(lat, long);
       $scope.location = lat + ', ' + long;
-      var leavingMS = new Date().getTime() + parseInt($scope.leavingTime);
+      debugger;
+      // var leavingMS = new Date().getTime() + $scope.slots.epochTime;
+      var leavingMS = Date.parse(midnight) + $scope.slots.epochTime * 1000;
       $scope.query = {
         location: $scope.location,
         modality : $scope.modality,
