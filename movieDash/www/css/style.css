@@ -1,11 +1,15 @@
-body {
-  font-family: Droid Sans;
+* {
+  -webkit-box-sizing: border-box;
+  -moz-box-sizing: border-box;
+  box-sizing: border-box;
 }
 
-h1 {
+body {
+  font-family: 'Open Sans', sans-serif;
+}
 
-  font-family: Paytone One;
-
+h3 {
+  font-family: 'Oleo Script', cursive;
 }
 
 a {
@@ -15,7 +19,35 @@ a {
 label {
   text-transform: uppercase;
   padding-bottom: 15px;
+}
 
+.black {
+  background-color: #000;
+  color: #FFF;
+}
+
+.orange {
+  color: #FF9800;
+}
+
+.bright-red {
+  background-color: #FF3D2E;
+}
+
+.light-blue {
+  background-color: #DAEAEF;
+}
+
+.burgundy {
+  background-color: #611427;
+}
+
+.dark-grey {
+  background-color: #424242;
+}
+
+.marine {
+  background-color: #046380;
 }
 
 .landing-cont h1 {
@@ -25,7 +57,6 @@ label {
   padding-bottom: 20px;
   border-bottom: 1px dotted;
   margin-bottom: 30px;
-  font-family: Paytone One;
   font-weight: 400;
   text-transform: uppercase;
 }
@@ -71,8 +102,6 @@ label {
   margin-top: 40px;
   margin-bottom: 40px;
   text-align: center;
-
-
 }
 
 .circle-background {
@@ -112,6 +141,21 @@ select {
   margin-top: 40px;
 }
 
+.movie-listing {
+  color: #FFF;
+  background-color: #272F32;
+  margin-bottom: 10px;
+  padding-bottom: 20px;
+  padding-top: 10px;
+  min-height: 168px;
+}
+
+.movie-title {
+  font-family: 'Open Sans', sans-serif;
+  font-size: 1.5em;
+  margin-top: 3px;
+}
+
 .movie-container {
   height: 550px;
   margin-bottom: 50px;
@@ -122,10 +166,23 @@ select {
   border-bottom-color: gray;
 }
 
-.movie-container__poster {
+#thumb {
+  border-width: 1px;
+  border-style: solid;
+  border-color: #CCC;
+  margin-left: 10px;
+  position: absolute;
+  display: inline-block;
+  width: 100px;
+  clip: rect(0px 100px 148px 0px);
+  height: 148px;
+}
+
+.poster {
   cursor: hand;
   cursor: pointer;
   max-height: 50%;
+  margin-bottom: 10px;
 }
 
 .movie-container.final-row {
@@ -134,7 +191,7 @@ select {
 
 .btn-trailer {
   width: 200px;
-  position: absolute;
+  position: fixed;
   bottom: 25px;
   left: 0;
   right:0;
@@ -160,10 +217,8 @@ select {
 }
 
 .movie-info {
+  margin-left: 120px;
   position: relative;
-}
-
-.reminder-btn {
 }
 
 @media screen and (max-width: 768px) {
