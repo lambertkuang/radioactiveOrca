@@ -16,9 +16,13 @@ app.controller('LandingCtrl', ['$scope', '$location', 'MovieClient', '$http',
     $scope.slots = {epochTime: elapsedTime, format: 12, step: 15};
 
     // prettify for user experience
+    var timeDesignation = 'AM';
     var prettyHour = Math.floor($scope.slots.epochTime/1000/60/60%60);
-    if (prettyHour > 12) {
-      prettyHour = prettyHour - 12;
+    if (prettyHour >= 12) {
+      if (prettyHour !== 12) {
+        prettyHour = prettyHour - 12;
+      }
+      timeDesignation = 'PM'
     }
     var prettyMin = Math.floor($scope.slots.epochTime/1000/60%60);
     // check if I need to add a zero
@@ -26,7 +30,7 @@ app.controller('LandingCtrl', ['$scope', '$location', 'MovieClient', '$http',
     if (minString.length < 2) {
       var prettyString = '0' + minString;
     }
-    $scope.prettyTime = prettyHour + ":" + (prettyString ? prettyString : minString);
+    $scope.prettyTime = prettyHour + ":" + (prettyString ? prettyString : minString) + ' ' + timeDesignation;
 
 
     // again from ionic-timepicker module
@@ -36,9 +40,13 @@ app.controller('LandingCtrl', ['$scope', '$location', 'MovieClient', '$http',
       } else {
         console.log('Selected time is : ', val);    // `val` will contain the selected time in epoch
 
+        var timeDesignation = 'AM';
         var prettyHour = Math.floor(val/60/60%60);
         if (prettyHour > 12) {
-          prettyHour = prettyHour - 12;
+          if (prettyHour !== 12) {
+            prettyHour = prettyHour - 12;
+          }
+          timeDesignation = 'PM'
         }
         var prettyMin = Math.floor(val/60%60);
         // check if I need to add a zero
@@ -46,7 +54,7 @@ app.controller('LandingCtrl', ['$scope', '$location', 'MovieClient', '$http',
         if (minString.length < 2) {
           var prettyString = '0' + minString;
         }
-        $scope.prettyTime = prettyHour + ":" + (prettyString ? prettyString : minString);
+        $scope.prettyTime = prettyHour + ":" + (prettyString ? prettyString : minString) + ' ' + timeDesignation;
       }
     };
 
