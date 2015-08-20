@@ -6,7 +6,7 @@
 // 'starter.services' is found in services.js
 // 'starter.controllers' is found in controllers.js
 angular.module('moviedash', [
-  'ionic', 
+  'ionic',
   'moviedash.landing',
   'moviedash.movies',
   'moviedash.details',
@@ -41,17 +41,17 @@ angular.module('moviedash', [
     .state('landing', {
       url : '/landing',
       controller: 'LandingCtrl',
-      templateUrl: '../templates/landing.html'
+      templateUrl: 'templates/landing.html'
     })
     .state('movies', {
       url : '/movies',
       controller: 'MoviesCtrl',
-      templateUrl: '../templates/movies.html'
+      templateUrl: 'templates/movies.html'
     })
     .state('details', {
       url: '/details',
       controller: 'DetailsCtrl',
-      templateUrl: '../templates/details.html'
+      templateUrl: 'templates/details.html'
     });
 }]);
-  
+

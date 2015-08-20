@@ -21,7 +21,7 @@ app.controller('LandingCtrl', ['$scope', '$location', 'MovieClient', '$http',
       prettyHour = prettyHour - 12;
     }
     var prettyMin = Math.floor($scope.slots.epochTime/1000/60%60);
-    $scope.prettyTime = prettyHour + ":" + prettyMin; 
+    $scope.prettyTime = prettyHour + ":" + prettyMin;
 
 
     // again from ionic-timepicker module
@@ -30,13 +30,13 @@ app.controller('LandingCtrl', ['$scope', '$location', 'MovieClient', '$http',
         console.log('Time not selected');
       } else {
         console.log('Selected time is : ', val);    // `val` will contain the selected time in epoch
-        
+
         var prettyHour = Math.floor(val/60/60%60);
         if (prettyHour > 12) {
           prettyHour = prettyHour - 12;
         }
         var prettyMin = Math.floor(val/60%60);
-        $scope.prettyTime = prettyHour + ":" + prettyMin; 
+        $scope.prettyTime = prettyHour + ":" + prettyMin;
         console.log($scope.prettyTime);
       }
     };
@@ -69,10 +69,10 @@ app.controller('LandingCtrl', ['$scope', '$location', 'MovieClient', '$http',
     };
 
     //handles submit from form and sends zip to factory
-    $scope.zipSubmit = function() {
+    $scope.zipSubmit = function(zip) {
       $scope.isLoading = true;
       $scope.error = null;
-      $http.get('http://maps.googleapis.com/maps/api/geocode/json?address=' + $scope.zip).then(function (response) {
+      $http.get('http://maps.googleapis.com/maps/api/geocode/json?address=' + zip).then(function (response) {
         if (!response) {
           $scope.error = 'Not a valid zipcode';
           return;
