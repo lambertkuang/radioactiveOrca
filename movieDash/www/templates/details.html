@@ -1,30 +1,44 @@
 <ion-view view-title="Movie Details">
-<ion-content class="padding light-blue">
+<ion-content class="padding dark-grey">
 
-<div class="details-panel container">
+<div class="movie-details-container">
+  <h3 class="movie-details-title">{{movie.movieName}}</h3>
   <div>
-    <img ng-src="{{movie.poster}}"/>
-    <div>
-      <h1>{{movie.movieName}}</h1>
-   <!--    <div class="video">
-        <img src=""/>
-        <a href="#"></a>
-      </div> -->
-        <button ng-class="btn" ng-disabled="{{ movie.trailerLink === false }}" ng-click="showTrailer(movie)">Show Trailer</button>
-      </div> 
-      <p class="lead">{{movie.synopsis}}</p>
-      <p ng-if="!movie.synopsis" class="text-muted" > No synopsis available </p>
-      <p>Rated: {{movie.rating}}</p>
-      <p>{{movie.theaterName}}</p>
-      <p>{{movie.theaterAddress}}</p>
-      <p class="text-muted">Travel Time: {{movie.transitTime}}</p>
-      <h3>Showtime: {{movie.showTime}}</h3>
-      <button class="reminder-btn hidden-xs" ng-class="btn" ng-click="reminder(movie)">{{ reminderMsg }}</button>
+    <div class="video-container" ng-controller="DetailsCtrl">
+    <!-- FOR TESTING ONLY -->
+    <!-- <iframe src="https://www.youtube.com/embed/zCqspczvg8o" frameborder="0" width="560" height="315"></iframe> -->
+    <!-- TODO: UNCOMMENT AND TEST W SERVER DATA -->
+    <iframe src="{{ trailerUrl }}" frameborder="0" width="560" height="315"></iframe>
+    </div>
+
+    <div class="movie-details">
+
+      <div class="movie-details-header">
+        <p class="lead">{{movie.synopsis}}</p>
+        <p ng-if="!movie.synopsis" class="text-muted"> No synopsis available </p>
+      </div>
+
+      <div class="movie-details-body clearfix">
+        <div class="address">
+          <p><strong>Rated:</strong> {{movie.rating}}</p>
+          <ul>
+            <li>{{movie.theaterName}}</li>
+            <li>{{movie.theaterAddress}}</li>
+          </ul>
+        </div><!-- /address -->
+
+        <div class="reminder">
+          <p class="text-muted"><strong>Travel Time:</strong> {{movie.transitTime}}</p>
+          <p class="orange"><strong>Showtime:</strong> {{movie.showTime}}</p>
+          <button class="button button-small remind-button" ng-class="btn" ng-click="reminder(movie)">{{ reminderMsg }}</button>
+        </div><!-- /reminder -->
+      </div><!-- /movie-details-body -->
+
     </div>
   </div>
 </div>
 
-<center><div id="directions-panel"></div></center>
+<center><div class="map-area"></div></center>
 <div><map center="{{origin}}" zoom="8">
   <directions
     draggable="true"
