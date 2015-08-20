@@ -1,50 +1,43 @@
 <ion-view view-title="Home">
-  <ion-content class="padding">
+  <ion-content class="dark-grey">
 
-    <div class="landing-cont">
-      <div class="landing">
+  <div class="landing-header">
 
-        <div class="header"><h1>Movie <i class="dash">DASH</i></h1>
+  <div class="header"><h1>Movie<i class="dash">DASH</i></h1>  </div>
+
+  <div class="landing-body">
+    <div class="departure" ng-model="modality">
+      <div class="travel-mode" id="centered">Travel Mode</div>
+        <div class="mode-buttons">  
+
+          <button class="button icon ion-model-s button-dark" ng-click="selectMode('driving')" ng-class="{'active': data.activeButton == 'driving'}"></button>
+
+          <button class="button icon ion-android-bicycle button-dark" ng-click="selectMode('bicycling')" ng-click="selectMode('bicycling')" ng-class="{'active': data.activeButton == 'bicycling'}"></button>
+
+          <button class="button button-dark icon ion-android-walk" ng-click="selectMode('walking')" ng-click="selectMode('walking')" ng-class="{'active': data.activeButton == 'walking'}"></button>
+
+          <button class="button icon ion-android-train button-dark" ng-click="selectMode('transit')" ng-click="selectMode('transit')" ng-class="{'active': data.activeButton == 'transit'}"></button>
+
         </div>
 
-        <div class="list">
-          <label class="item item-input item-select">
-            <div class="input-label">
-              Travel Mode
-            </div>
-            <select class="form-control" ng-model="modality">
-              <option value="driving">Driving</option>
-              <option value="walking">Walking</option>
-              <option value="bicycling">Biking</option>
-              <option value="transit">Public Transportation</option>
-            </select>
-          </label>
+    </div>
+  </div>
 
-          <label class="item item-input item-select">
-            <div class="input-label">
-              Departure Time
-            </div>
-
-            <ionic-timepicker etime="slots.epochTime" format="slots.format" step="slots.step" callback="timePickerCallback">
-
-            <button class="button button-block button-positive"> {{ prettyTime }} </button>
-
-            </ionic-timepicker>
-          </label>
+  <div class="departure-time-container">
+    <div class="departure-time-string">Departure Time</div>
+      <div>
+        <ionic-timepicker etime="slots.epochTime" format="slots.format" step="slots.step" callback="timePickerCallback">
+        <div class="departure-time-button">
+          <button class="button button-block button-positive"> {{ prettyTime }} </button> 
         </div>
+        </ionic-timepicker>
+      </div>
+  </div>
 
-        <button type="button" class="button button-positive" ng-click="findLocation()">Use Current Location</button>
-
-
-
-        <div class="divider">
-          <div class="or">
-            <span class="circle-background">OR</span>
-          </div>
-        </div>
-
-        <!-- shows form when geolocation errors out -->
-        <div class="zipcode">
+  <div class="location-container">
+    <button type="button" class="button icon ion-pinpoint button-location" ng-click="findLocation()"> Your Location</button>
+    
+    <div class="zipcode">
 
           <label class="item item-input">
             <form name="zipCode" ng-submit="zipSubmit(zip)">
@@ -55,11 +48,39 @@
           </label>
         </div>
 
+  </div>
+
+
+
+
+  </ion-content>
+</ion-view>
+
+<!--
+    <div class="landing-cont">
+      <div class="landing">
+
+        <div class="header"><h1>Movie <i class="dash">DASH</i></h1>
+        </div>
+
+
+        </div>
+
+
+
+
+        <div class="divider">
+          <div class="or">
+            <span class="circle-background">OR</span>
+          </div>
+        </div>
+
+        <shows form when geolocation errors out -->
+        <!--
+
         <center><img class="landing-message spiffy" ng-if="isLoading" src="img/spiffygif_46x46.gif"><center>
         <div class="landing-message" ng-if="error">{{error}}</div>
       </div>
 
     </div>
-
-  </ion-content>
-</ion-view>
+-->
