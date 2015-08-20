@@ -72,7 +72,6 @@ angular.module('moviedash.movies', [])
   //     $scope.title = movie.movieName;
   //     $scope.trailerUrl = $sce.trustAsResourceUrl(embededUrl);
 
-
   //     $scope.$modalInstance = $modal.open({
   //       templateUrl: "../App/movies/videoplayer.html",
   //       controller: 'MoviesCtrl',
