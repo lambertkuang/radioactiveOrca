@@ -47,10 +47,10 @@
         <div class="zipcode">
 
           <label class="item item-input">
-            <form name="zipCode">
+            <form name="zipCode" ng-submit="zipSubmit(zip)">
               <span class="input-label">Zipcode</span>
-              <input ng-model="zip" type="tel" pattern="([1-9])+(?:-?\d){4,}" placeholder="Enter your zipcode" class="" required>
-              <button on-tap="zipSubmit()" class="button button-positive" ng-disabled="zipCode.$invalid">Go</button>
+              <input ng-model="zip" type="tel" pattern="([1-9])+(?:-?\d){4,}" placeholder="Enter your zipcode" required>
+              <button class="button button-positive" ng-disabled="zipCode.$invalid">Go</button>
             </form>
           </label>
         </div>

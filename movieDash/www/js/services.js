@@ -60,7 +60,7 @@ app.factory('convert', function () {
     }
     //change minutes to showtime minutes
     today.setMinutes(+timeArray[1]);
-    
+
     return today.getTime();
   };
 
@@ -80,12 +80,12 @@ app.filter('timeFromNow', function() {
     var minutes = Math.round(delta / 60);
     var hours = Math.floor(minutes / 60);
     minutes = minutes - hours * 60;
-    if(hours === 0) { 
+    if(hours === 0) {
       if (minutes === 1) {
         return "in 1 minute";
-      } 
+      }
       return "in " + minutes.toString() + " minutes";
-    } 
+    }
     if (hours === 1) {
       if (minutes === 0) {
         return "in 1 hour";

@@ -32,10 +32,10 @@ app.controller('LandingCtrl', ['$scope', '$location', 'MovieClient', '$http',
     };
 
     //handles submit from form and sends zip to factory
-    $scope.zipSubmit = function() {
+    $scope.zipSubmit = function(zip) {
       $scope.isLoading = true;
       $scope.error = null;
-      $http.get('http://maps.googleapis.com/maps/api/geocode/json?address=' + $scope.zip).then(function (response) {
+      $http.get('http://maps.googleapis.com/maps/api/geocode/json?address=' + zip).then(function (response) {
         if (!response) {
           $scope.error = 'Not a valid zipcode';
           return;
