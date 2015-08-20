@@ -24,12 +24,9 @@
             <div class="input-label">
               Departure Time
             </div>
-            <select class="form-control" ng-model="leavingTime">
-              <option value="0">Now</option>
-              <option value="1800000">in 30 minutes</option>
-              <option value="3600000">in 1 hour</option>
-              <option value="7200000">in 2 hours</option>
-            </select>
+            <ionic-timepicker etime="slots.epochTime" format="slots.format" step="slots.step" callback="timePickerCallback">    
+            <button class="button button-block button-positive"> {{ prettyTime }} </button>
+            </ionic-timepicker>
           </label>          
         </div>    
 
