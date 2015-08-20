@@ -1,10 +1,10 @@
 angular.module('moviedash.details', [])
 
-.controller('DetailsCtrl', ['$scope', 'selected', function ($scope, selected) {
+.controller('DetailsCtrl', ['$scope', 'selected', '$modal', '$sce', function($scope, selected, $modal, $sce) {
   // Code
   $scope.movie = selected.getStorage('movie');
 
-  $scope.reminderMsg = 'LEAVE REMINDER';
+  $scope.reminderMsg = 'Remind Me to Leave';
   var uniqueMovieId = $scope.movie.id + $scope.movie.showTime + $scope.movie.movieName;
   var alreadyClicked = false;
   var timeoutID;
@@ -18,9 +18,33 @@ angular.module('moviedash.details', [])
     timeoutID = reminderInfo[1];
 
     if (alreadyClicked) {
-      $scope.reminderMsg = 'CLEAR REMINDER';
+      $scope.reminderMsg = 'Don\'t Remind Me';
     }
   }
+
+  $scope.showTrailer = function(movie) {
+    console.log("show trailer");
+    var link = movie.trailerLink;
+    if (link !== false) {
+      var videoId = link.slice(link.indexOf('=') + 1);
+      var embeddedUrl = 'https://www.youtube.com/embed/' + videoId;
+
+      $scope.title = movie.movieName;
+      $scope.trailerUrl = $sce.trustAsResourceUrl(embeddedUrl);
+
+      $scope.$modalInstance = $modal.open({
+        templateUrl: '../../templates/videoplayer.html',
+        controller: 'DetailsCtrl',
+        size: 'lg',
+        scope: $scope
+      });
+    }
+  };
+
+  $scope.closeTrailer = function() {
+    $scope.$modalInstance.close('');
+
+  };
 
   $scope.reminder = function(movie) {
     // HTML 5 Notifications setup
@@ -43,12 +67,12 @@ angular.module('moviedash.details', [])
         var instance = new Notification("Leave now to catch " + movie.movieName+ " at " + movie.showTime + " @ " + movie.theaterAddress);
       }, leaveTime);
 
-      $scope.reminderMsg = 'CLEAR REMINDER';
+      $scope.reminderMsg = 'Don\'t Remind Me';
       alreadyClicked = true;
       $scope.btn = "btn btn-success";
     } else {
       window.clearTimeout(timeoutID);
-      $scope.reminderMsg = 'LEAVE REMINDER';
+      $scope.reminderMsg = 'Remind Me to Leave';
       alreadyClicked = false;
       $scope.btn = "btn btn-primary";
     }
