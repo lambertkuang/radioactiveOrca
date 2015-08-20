@@ -29,7 +29,14 @@ app.controller('LandingCtrl', ['$scope', '$location', 'MovieClient', '$http',
       } else {
         console.log('Selected time is : ', val);    // `val` will contain the selected time in epoch
       }
-      $scope.prettyTime = Math.floor($scope.slots.epochTime/1000/60/60%60) + ":" + Math.floor($scope.slots.epochTime/1000/60%60); 
+    
+      var prettyHour = Math.floor($scope.slots.epochTime/1000/60/60%60);
+      if (prettyHour > 12) {
+        prettyHour = prettyHour - 12;
+      }
+      var prettyMin = Math.floor($scope.slots.epochTime/1000/60%60);
+      $scope.prettyTime = prettyHour + ":" + prettyMin; 
+    
     };
 
 
