@@ -200,6 +200,19 @@ select {
   text-transform: uppercase;
 }
 
+.video { position: relative; }
+
+.video a {
+   position: absolute;
+   display: block;
+   background-color: blue;
+/*   background: url(url_to_play_button_image.png);
+*/   height: 40px;
+   width: 40px;
+   top: 20px;
+   left: 20px;
+}
+
 .modal-body {
   position: relative;
   width: 100%;

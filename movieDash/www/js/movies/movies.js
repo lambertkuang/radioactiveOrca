@@ -62,28 +62,29 @@ angular.module('moviedash.movies', [])
   $scope.movies = developerMode ? stub : MovieClient.getResults().data;
 
 
-  $scope.showTrailer = function(movie) {
-    var link = movie.trailerLink;
-    if (link !== false) {
-      var videoId = link.slice(link.indexOf('=') + 1);
-      var embededUrl = 'https://www.youtube.com/embed/' + videoId;
+  // $scope.showTrailer = function(movie) {
+  //   console.log("show trailer");
+  //   var link = movie.trailerLink;
+  //   if (link !== false) {
+  //     var videoId = link.slice(link.indexOf('=') + 1);
+  //     var embededUrl = 'https://www.youtube.com/embed/' + videoId;
 
-      $scope.title = movie.movieName;
-      $scope.trailerUrl = $sce.trustAsResourceUrl(embededUrl);
+  //     $scope.title = movie.movieName;
+  //     $scope.trailerUrl = $sce.trustAsResourceUrl(embededUrl);
 
-      $scope.$modalInstance = $modal.open({
-        templateUrl: "../App/movies/videoplayer.html",
-        controller: 'MoviesCtrl',
-        size: "lg",
-        scope: $scope
-      });
-    }
-  };
+  //     $scope.$modalInstance = $modal.open({
+  //       templateUrl: "../App/movies/videoplayer.html",
+  //       controller: 'MoviesCtrl',
+  //       size: "lg",
+  //       scope: $scope
+  //     });
+  //   }
+  // };
 
-  $scope.closeTrailer = function() {
-    $scope.$modalInstance.close('');
+  // $scope.closeTrailer = function() {
+  //   $scope.$modalInstance.close('');
 
-  };
+  // };
 
   $scope.getLeaveTime = function() {
     var leaveTime = new Date(selected.getStorage('leavingTime'));
