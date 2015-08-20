@@ -6,7 +6,7 @@
 
         <div class="header"><h1>Movie <i class="dash">DASH</i></h1>
         </div>
-        
+
         <div class="list">
           <label class="item item-input item-select">
             <div class="input-label">
@@ -24,15 +24,15 @@
             <div class="input-label">
               Departure Time
             </div>
-            <ionic-timepicker etime="slots.epochTime" format="slots.format" step="slots.step" callback="timePickerCallback">    
+            <ionic-timepicker etime="slots.epochTime" format="slots.format" step="slots.step" callback="timePickerCallback">
             <button class="button button-block button-positive"> {{ prettyTime }} </button>
             </ionic-timepicker>
-          </label>          
-        </div>    
+          </label>
+        </div>
 
         <button type="button" class="button button-positive" ng-click="findLocation()">Use Current Location</button>
-        
-        
+
+
 
         <div class="divider">
           <div class="or">
@@ -44,15 +44,15 @@
         <div class="zipcode">
 
           <label class="item item-input">
-            <form name="zipCode">
+            <form name="zipCode" ng-submit="zipSubmit(zip)">
               <span class="input-label">Zipcode</span>
               <input ng-model="zip" type="tel" pattern="([1-9])+(?:-?\d){4,}" placeholder="Enter your zipcode" class="" required>
-              <button on-tap="zipSubmit()" class="button button-positive" ng-disabled="zipCode.$invalid">Go</button>
+              <button class="button button-positive" ng-disabled="zipCode.$invalid">Go</button>
             </form>
           </label>
         </div>
 
-        <center><img class="landing-message spiffy" ng-if="isLoading" src="../img/spiffygif_46x46.gif"><center>
+        <center><img class="landing-message spiffy" ng-if="isLoading" src="img/spiffygif_46x46.gif"><center>
         <div class="landing-message" ng-if="error">{{error}}</div>
       </div>
 
