@@ -4,6 +4,7 @@ app.controller('LandingCtrl', ['$scope', '$location', 'MovieClient', '$http',
   function ($scope, $location, MovieClient, $http) {
     $scope.modality = "driving";
 
+
     // do a lot of Date finagling
     var rightNow = new Date();
     var midnight = rightNow.toString().split(" ");
@@ -22,21 +23,22 @@ app.controller('LandingCtrl', ['$scope', '$location', 'MovieClient', '$http',
     var prettyMin = Math.floor($scope.slots.epochTime/1000/60%60);
     $scope.prettyTime = prettyHour + ":" + prettyMin; 
 
+
     // again from ionic-timepicker module
     $scope.timePickerCallback = function (val) {
       if (typeof (val) === 'undefined') {
         console.log('Time not selected');
       } else {
         console.log('Selected time is : ', val);    // `val` will contain the selected time in epoch
+        
+        var prettyHour = Math.floor(val/60/60%60);
+        if (prettyHour > 12) {
+          prettyHour = prettyHour - 12;
+        }
+        var prettyMin = Math.floor(val/60%60);
+        $scope.prettyTime = prettyHour + ":" + prettyMin; 
+        console.log($scope.prettyTime);
       }
-    
-      var prettyHour = Math.floor($scope.slots.epochTime/1000/60/60%60);
-      if (prettyHour > 12) {
-        prettyHour = prettyHour - 12;
-      }
-      var prettyMin = Math.floor($scope.slots.epochTime/1000/60%60);
-      $scope.prettyTime = prettyHour + ":" + prettyMin; 
-    
     };
 
 
