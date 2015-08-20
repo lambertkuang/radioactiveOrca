@@ -53,5 +53,9 @@ angular.module('moviedash', [
       controller: 'DetailsCtrl',
       templateUrl: 'templates/details.html'
     });
-}]);
+}])
+
+.controller('MainCtrl', function($scope) {
+  screen.unlockOrientation();
+});
 
