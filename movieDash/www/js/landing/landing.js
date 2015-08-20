@@ -21,7 +21,12 @@ app.controller('LandingCtrl', ['$scope', '$location', 'MovieClient', '$http',
       prettyHour = prettyHour - 12;
     }
     var prettyMin = Math.floor($scope.slots.epochTime/1000/60%60);
-    $scope.prettyTime = prettyHour + ":" + prettyMin;
+    // check if I need to add a zero
+    var minString = prettyMin.toString();
+    if (minString.length < 2) {
+      var prettyString = '0' + minString;
+    }
+    $scope.prettyTime = prettyHour + ":" + (prettyString ? prettyString : minString);
 
 
     // again from ionic-timepicker module
@@ -36,8 +41,12 @@ app.controller('LandingCtrl', ['$scope', '$location', 'MovieClient', '$http',
           prettyHour = prettyHour - 12;
         }
         var prettyMin = Math.floor(val/60%60);
-        $scope.prettyTime = prettyHour + ":" + prettyMin;
-        console.log($scope.prettyTime);
+        // check if I need to add a zero
+        var minString = prettyMin.toString();
+        if (minString.length < 2) {
+          var prettyString = '0' + minString;
+        }
+        $scope.prettyTime = prettyHour + ":" + (prettyString ? prettyString : minString);
       }
     };
 
