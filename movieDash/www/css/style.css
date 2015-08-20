@@ -21,8 +21,33 @@ label {
   padding-bottom: 15px;
 }
 
-.top-margin {
-  padding-top: 50px;
+.black {
+  background-color: #000;
+  color: #FFF;
+}
+
+.orange {
+  color: #FF9800;
+}
+
+.bright-red {
+  background-color: #FF3D2E;
+}
+
+.light-blue {
+  background-color: #DAEAEF;
+}
+
+.burgundy {
+  background-color: #611427;
+}
+
+.dark-grey {
+  background-color: #424242;
+}
+
+.marine {
+  background-color: #046380;
 }
 
 .landing-cont h1 {
@@ -117,7 +142,8 @@ select {
 }
 
 .movie-listing {
-  background-color: yellow;
+  color: #FFF;
+  background-color: #272F32;
   margin-bottom: 10px;
   padding-bottom: 20px;
   padding-top: 10px;

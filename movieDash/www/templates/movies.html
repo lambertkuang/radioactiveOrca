@@ -1,3 +1,6 @@
+<ion-view view-title="Movies">
+<ion-content class="padding light-blue">
+
 <div class="list" ng-controller="MoviesCtrl">
   <center>
     <h3 class="top-margin">Leaving at {{getLeaveTime()}}</h3>
@@ -13,11 +16,11 @@
     <!-- End Movie Poster -->
 
     <div class="movie-info">
-      <p class="movie-title">{{movie.movieName | limitTo: 30}}</p>
+      <p class="movie-title orange">{{movie.movieName | limitTo: 30}}</p>
       <p class="text-muted">{{movie.theaterName}}</p>
       <p><strong>Travel Time:</strong> {{movie.transitTime}}</p>
 
-      <h4>
+      <h4 class="orange">
         <strong>Showtime:</strong> {{movie.showTime}} <small class="text-muted">({{localShowtime(movie.showTime) | timeFromNow}})</small>
       </h4>
     </div>
@@ -30,3 +33,6 @@
       </div> -->
   </div>
 </div>
+
+</ion-content>
+</ion-view>
