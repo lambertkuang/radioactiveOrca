@@ -2,8 +2,9 @@
   <ion-content class="dark-grey">
 
   <div class="landing-header">
-
-  <div class="header"><h1>Movie<i class="dash">DASH</i></h1>  </div>
+    <div class="header"><h1>Movie<i class="dash">DASH</i></h1>  
+    </div>
+  </div>
 
   <div class="landing-body">
     <div class="departure" ng-model="modality">
@@ -19,7 +20,6 @@
           <button class="button icon ion-android-train button-dark" ng-click="selectMode('transit')" ng-click="selectMode('transit')" ng-class="{'active': data.activeButton == 'transit'}"></button>
 
         </div>
-
     </div>
   </div>
 
@@ -35,23 +35,35 @@
   </div>
 
   <div class="location-container">
-    <button type="button" class="button icon ion-pinpoint button-location" ng-click="findLocation()"> Your Location</button>
-    
-    <div class="zipcode">
-
-          <label class="item item-input">
-            <form name="zipCode" ng-submit="zipSubmit(zip)">
-              <span class="input-label">Zipcode</span>
-              <input ng-model="zip" type="tel" pattern="([1-9])+(?:-?\d){4,}" placeholder="Enter your zipcode" class="" required>
-              <button class="button button-positive" ng-disabled="zipCode.$invalid">Go</button>
-            </form>
-          </label>
-        </div>
-
+    <button type="button" class="button icon ion-pinpoint button-location" ng-click="findLocation()"> Use My Location</button>
   </div>
 
+    <div class="zipcode-container">
+      <!-- <div class="list"> -->
+        <!-- <div class="item item-input-inset"> -->
+      <form name="zipCode" ng-submit="zipSubmit(zip)">
+        <label class="item-input">
+        <div class="zipcode-inline">Or, enter your zipcode: </div>
+        <!-- <div class="zipcode-string">
+          Or enter your zipcode: 
+        </div> -->
+          <!-- <div class="orange"> -->
+            
+              <div class="item-input-inset" id="zipcode-box">
+              
+              <input ng-model="zip" type="tel" pattern="([1-9])+(?:-?\d){4,}" class="zipcode-field" placeholder="Zipcode" required>
+              <button class="button button-location zipcode-button" ng-disabled="zipCode.$invalid">Go</button>
+              
+              </div>  
+          <!-- </div> -->
 
+        </label>
+      </form>
 
+      <div class="spinner-container">
+        <center><img class="landing-message spiffy" ng-if="isLoading" src="img/spiffygif_46x46.gif"><center>
+        <div class="landing-message" ng-if="error">{{error}}</div>
+      </div>
 
   </ion-content>
 </ion-view>

@@ -94,7 +94,55 @@ label {
   background-color: #FF9800;
 }
 
+.zipcode-container {
+  padding: 20px 0 20px 0;
+  background-color: #FFF;
+  text-align: center;
+  border: solid 1px #7E8AA2;
+  height: 100px;
+}
 
+.zipcode-inline {
+  /*position: absolute;*/
+  /*width: 50%*/
+  background-color: #FFF;
+  height: 50px;
+  width: 30%;
+  margin-right: 20px;
+  text-align: right;
+  display: table-cell;
+  vertical-align: middle;
+  /*display: inline-block;*/
+}
+
+.zipcode-button {
+  margin-right: -10px;
+  float: right;
+  margin-bottom: -8px;
+  /*display: inline;*/
+}
+
+.zipcode-field {
+  text-align: center;
+  background-color: #FFF;
+}
+
+#zipcode-box {
+  /*margin-bottom: -20px;*/
+  /*margin-right: -20px;*/
+  background-color: #eee;
+  position: absolute;
+  width: 60%;
+  /*display: table-cell;*/
+  /*vertical-align: top;*/
+  margin: -15px 0 -15px 0;
+  /*border: solid 1px #7E8AA2;*/
+}
+
+.spinner-container {
+  background-color: #FFF;
+  padding-bottom: 40px;
+}
 
 .location-container {
   padding: 20px 0 20px 0;
@@ -232,6 +280,8 @@ label {
 
 .landing-message {
   position: relative;
+  margin-right: 10px;
+  margin-left: 10px;
   top: 30px;
   height: 50px;
 }
