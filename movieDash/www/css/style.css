@@ -211,7 +211,7 @@ select {
 
 .movie-details-body {
   /* contains address and reminder */
-  padding: 0;
+  padding-right: 10px;
 }
 
 .address,
@@ -288,14 +288,20 @@ select {
 
 .movie-title {
   font-family: 'Open Sans', sans-serif;
-  font-size: 1.5em;
-  margin-top: 3px;
+  font-size: 1.25em;
+  margin-top: 2px;
 }
 
 .movie-details-title {
   font-family: 'Oleo Script', cursive;
   text-align: center;
   color: #FF9800;
+}
+
+h4 .showtime {
+  color: #FF9800
+  font-family: 'Open Sans', sans-serif;
+  font-size: 1.25em;
 }
 
 .movie-details-container {
