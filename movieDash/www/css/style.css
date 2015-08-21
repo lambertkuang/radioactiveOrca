@@ -1,3 +1,7 @@
+/********************************************
+  SITE-WIDE STYLING
+*********************************************/
+
 * {
   -webkit-box-sizing: border-box;
   -moz-box-sizing: border-box;
@@ -20,6 +24,11 @@ label {
   text-transform: uppercase;
   padding-bottom: 15px;
 }
+
+
+/********************************************
+  LANDING PAGE 
+*********************************************/
 
 .landing-header h1 {
   font-family: 'Poiret One', cursive;
@@ -103,8 +112,6 @@ label {
 }
 
 .zipcode-inline {
-  /*position: absolute;*/
-  /*width: 50%*/
   background-color: #FFF;
   height: 50px;
   width: 30%;
@@ -112,14 +119,12 @@ label {
   text-align: right;
   display: table-cell;
   vertical-align: middle;
-  /*display: inline-block;*/
 }
 
 .zipcode-button {
   margin-right: -10px;
   float: right;
   margin-bottom: -8px;
-  /*display: inline;*/
 }
 
 .zipcode-field {
@@ -128,15 +133,10 @@ label {
 }
 
 #zipcode-box {
-  /*margin-bottom: -20px;*/
-  /*margin-right: -20px;*/
   background-color: #eee;
   position: absolute;
   width: 60%;
-  /*display: table-cell;*/
-  /*vertical-align: top;*/
   margin: -15px 0 -15px 0;
-  /*border: solid 1px #7E8AA2;*/
 }
 
 .spinner-container {
@@ -150,6 +150,56 @@ label {
   text-align: center;
   border: solid 1px #7E8AA2;
 }
+
+.landing-cont h1 {
+  font-size: 2.7em;
+  letter-spacing: 2px;
+  text-align: center;
+  padding-bottom: 20px;
+  border-bottom: 1px dotted;
+  margin-bottom: 30px;
+  font-weight: 400;
+  text-transform: uppercase;
+}
+
+/*.landing-cont {
+  background: url('../Assets/background copy.jpg');
+  background-size: cover;
+  height: 100vh;
+  width: 100vw;
+}*/
+
+.landing {
+  background: #ffffff;
+  position: relative;
+  top: 20vh;
+  padding: 50px;
+  padding-bottom: 90px;
+  font-size: 1.15em;
+  /*box-shadow: inset 0 0 10px 3px #333;*/
+}
+
+/*.landing .btn {
+  font-weight: 500;
+  font-size: 16px;
+}*/
+
+.landing-message {
+  position: relative;
+  margin-right: 10px;
+  margin-left: 10px;
+  top: 30px;
+  height: 50px;
+}
+
+select {
+  margin-bottom: 20px;
+}
+
+
+/********************************************
+  MOVIE DETAILS VIEW
+*********************************************/
 
 .movie-details {
   color: #FFF;
@@ -181,6 +231,7 @@ label {
   margin-bottom: 5px;
 }
 
+/* Create responsive layout for small screens */
 @media all and (max-width: 480px) {
   .movie-details-body {
     padding: 0;
@@ -216,105 +267,6 @@ label {
   margin-top: 10px;
 }
 
-.black {
-  background-color: #000;
-  color: #FFF;
-}
-
-.orange {
-  color: #FF9800;
-}
-
-.bright-red {
-  background-color: #FF3D2E;
-}
-
-.light-blue {
-  background-color: #DAEAEF;
-}
-
-.burgundy {
-  background-color: #611427;
-}
-
-.dark-grey {
-  background-color: #272F32;
-}
-
-.marine {
-  background-color: #263248;
-}
-
-.landing-cont h1 {
-  font-size: 2.7em;
-  letter-spacing: 2px;
-  text-align: center;
-  padding-bottom: 20px;
-  border-bottom: 1px dotted;
-  margin-bottom: 30px;
-  font-weight: 400;
-  text-transform: uppercase;
-}
-
-.landing-cont {
-  background: url('../Assets/background copy.jpg');
-  background-size: cover;
-  height: 100vh;
-  width: 100vw;
-}
-
-.landing {
-  background: #ffffff;
-  position: relative;
-  top: 20vh;
-  padding: 50px;
-  padding-bottom: 90px;
-  font-size: 1.15em;
-  /*box-shadow: inset 0 0 10px 3px #333;*/
-}
-
-.landing .btn {
-  font-weight: 500;
-  font-size: 16px;
-}
-
-.landing-message {
-  position: relative;
-  margin-right: 10px;
-  margin-left: 10px;
-  top: 30px;
-  height: 50px;
-}
-
-
-.or {
-  font-size: 1em;
-  text-transform: uppercase;
-  font-weight: 700;
-  font-style: italic;
-  color: #fff;
-  margin-top: 40px;
-  margin-bottom: 40px;
-  text-align: center;
-}
-
-.circle-background {
-  background-color: #333;
-  border-radius: 100%;
-  padding-left: 14px;
-  padding-top: 15px;
-  padding-bottom: 15px;
-  padding-right: 15px;
-
-}
-
-select {
-  margin-bottom: 20px;
-}
-
-.zip-code-submit {
-  padding-top: 20px;
-}
 
 .movie-panel {
   margin-top: 20px;
@@ -323,10 +275,6 @@ select {
 .details-panel {
   margin-bottom: 20px;
   margin-top: 20px;
-}
-
-.route-info {
-  margin-top: 40px;
 }
 
 .movie-listing {
@@ -387,7 +335,7 @@ select {
   border-bottom-style: none;
 }
 
-.btn-trailer {
+/*.btn-trailer {
   width: 200px;
   position: fixed;
   bottom: 25px;
@@ -396,7 +344,7 @@ select {
   margin-left: auto;
   margin-right: auto;
   text-transform: uppercase;
-}
+}*/
 
 .video-container {
   position: relative;
@@ -416,16 +364,15 @@ select {
   height: 100%;
 }
 
-.video a {
+/*.video a {
    position: absolute;
    display: block;
    background-color: blue;
-/*   background: url(url_to_play_button_image.png);
-*/   height: 40px;
+   height: 40px;
    width: 40px;
    top: 20px;
    left: 20px;
-}
+}*/
 
 .movie-info {
   margin-left: 120px;
@@ -446,7 +393,11 @@ select {
   }
 }
 
-/* utilities */
+/********************************************
+  UTILITIES 
+*********************************************/
+
+/* Clear floats */
 
 .clearfix::after {
   content: "";
@@ -456,5 +407,26 @@ select {
 
 #centered {
   display: table-cell;
+}
+
+.black {
+  background-color: #000;
+  color: #FFF;
+}
+
+.orange {
+  color: #FF9800;
+}
+
+.light-blue {
+  background-color: #DAEAEF;
+}
+
+.dark-grey {
+  background-color: #272F32;
+}
+
+.marine {
+  background-color: #263248;
 }
 
