@@ -2,14 +2,14 @@
   <ion-content class="dark-grey">
 
   <div class="landing-header">
-    <div class="header"><h1>Movie<i class="dash">DASH</i></h1>  
+    <div class="header"><h1>Movie<i class="dash">DASH</i></h1>
     </div>
   </div>
 
   <div class="landing-body">
     <div class="departure" ng-model="modality">
       <div class="travel-mode" id="centered">Travel Mode</div>
-        <div class="mode-buttons">  
+        <div class="mode-buttons">
 
           <button class="button icon ion-model-s button-dark" ng-click="selectMode('driving')" ng-class="{'active': data.activeButton == 'driving'}"></button>
 
@@ -28,7 +28,7 @@
       <div>
         <ionic-timepicker etime="slots.epochTime" format="slots.format" step="slots.step" callback="timePickerCallback">
         <div class="departure-time-button">
-          <button class="button button-block button-positive"> {{ prettyTime }} </button> 
+          <button class="button button-block button-positive"> {{ prettyTime }} </button>
         </div>
         </ionic-timepicker>
       </div>
@@ -45,16 +45,16 @@
         <label class="item-input">
         <div class="zipcode-inline">Or, enter your zipcode: </div>
         <!-- <div class="zipcode-string">
-          Or enter your zipcode: 
+          Or enter your zipcode:
         </div> -->
           <!-- <div class="orange"> -->
-            
+
               <div class="item-input-inset" id="zipcode-box">
-              
-              <input ng-model="zip" type="tel" pattern="([1-9])+(?:-?\d){4,}" class="zipcode-field" placeholder="Zipcode" required>
+
+              <input ng-model="zip" type="tel" pattern="([0-9])+(?:-?\d){4,}" class="zipcode-field" placeholder="Zipcode" required>
               <button class="button button-location zipcode-button" ng-disabled="zipCode.$invalid">Go</button>
-              
-              </div>  
+
+              </div>
           <!-- </div> -->
 
         </label>
