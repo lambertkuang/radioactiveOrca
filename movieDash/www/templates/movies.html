@@ -6,31 +6,26 @@
     <h3 class="top-margin">Leaving at {{getLeaveTime()}}</h3>
   </center>
   <div class="list">
-  <div ng-class="{'final-row': isFinalRow($index, movies.length)}" ng-repeat="movie in movies | orderBy: 'dateObjectShowTime'">
+    <div ng-class="{'final-row': isFinalRow($index, movies.length)}" ng-repeat="movie in movies | orderBy: 'dateObjectShowTime'">
 
-  <div class="movie-listing">
-    <!-- Movie Poster -->
-    <img ng-if="movie.poster !== 'N/A'" ng-click="selectMovie(movie)" id="thumb" class="poster img-responsive" ng-src="{{movie.poster}}"/>
+      <div class="movie-listing movie-title">
+        <!-- Movie Poster -->
+        <img ng-if="movie.poster !== 'N/A'" ng-click="selectMovie(movie)" id="thumb" class="poster img-responsive" ng-src="{{movie.poster}}"/>
 
-    <img id="thumb" class="poster img-responsive"  ng-click="selectMovie(movie)" ng-if="movie.poster === 'N/A'" ng-src="../../Assets/default-poster.png">
-    <!-- End Movie Poster -->
+        <img id="thumb" class="poster img-responsive"  ng-click="selectMovie(movie)" ng-if="movie.poster === 'N/A'" ng-src="../../Assets/default-poster.png">
+        <!-- End Movie Poster -->
 
-    <div class="movie-info">
-      <p class="movie-title orange">{{movie.movieName | limitTo: 30}}</p>
-      <p class="text-muted">{{movie.theaterName}}</p>
-      <p><strong>Travel Time:</strong> {{movie.transitTime}}</p>
+        <div class="movie-info">
+          <p class="movie-title orange">{{movie.movieName | limitTo: 30}}</p>
+          <p class="text-muted">{{movie.theaterName}}</p>
+          <p><strong>Travel Time:</strong> {{movie.transitTime}}</p>
 
-      <h4 class="orange">
-        <strong>Showtime:</strong> {{movie.showTime}} <small class="text-muted">({{localShowtime(movie.showTime) | timeFromNow}})</small>
-      </h4>
+          <h4 class="showtime orange">
+            <strong>Showtime:</strong> {{movie.showTime}} <small class="text-muted">({{localShowtime(movie.showTime) | timeFromNow}})</small>
+          </h4>
+        </div>
+      </div>
     </div>
-  </div>
-
-  </div>
-
-     <!--  <div>
-        <button class="btn btn-trailer btn-primary" ng-disabled="{{ movie.trailerLink === false }}" ng-click="showTrailer(movie)">Show Trailer</button>
-      </div> -->
   </div>
 </div>
 
