@@ -2,8 +2,10 @@ var app = angular.module('moviedash.landing', []);
 
 app.controller('LandingCtrl', ['$scope', '$location', 'MovieClient', '$http',
   function ($scope, $location, MovieClient, $http) {
-    $scope.modality = "driving";
-
+    $scope.modality = 'driving';
+    $scope.data = {
+      activeButton : 'driving'
+    };
     // do a lot of Date finagling
     var rightNow = new Date();
     var midnight = rightNow.toString().split(" ");
@@ -22,7 +24,7 @@ app.controller('LandingCtrl', ['$scope', '$location', 'MovieClient', '$http',
       if (prettyHour !== 12) {
         prettyHour = prettyHour - 12;
       }
-      timeDesignation = 'PM'
+      timeDesignation = 'PM';
     }
     var prettyMin = Math.floor($scope.slots.epochTime/1000/60%60);
     // check if I need to add a zero
@@ -31,7 +33,14 @@ app.controller('LandingCtrl', ['$scope', '$location', 'MovieClient', '$http',
       var prettyString = '0' + minString;
     }
     $scope.prettyTime = prettyHour + ":" + (prettyString ? prettyString : minString) + ' ' + timeDesignation;
-
+    
+    // call on button click to set mode of transport
+    $scope.selectMode = function(mode) {
+      $scope.modality = mode;
+      $scope.data = {
+        activeButton: mode
+      };
+    };
 
     // again from ionic-timepicker module
     $scope.timePickerCallback = function (val) {
@@ -57,7 +66,6 @@ app.controller('LandingCtrl', ['$scope', '$location', 'MovieClient', '$http',
         $scope.prettyTime = prettyHour + ":" + (prettyString ? prettyString : minString) + ' ' + timeDesignation;
       }
     };
-
 
     //Checks if geolocation is available, shows form if not
     $scope.findLocation = function() {
@@ -101,7 +109,7 @@ app.controller('LandingCtrl', ['$scope', '$location', 'MovieClient', '$http',
     };
 
     var sendQuery = function(lat, long) {
-      console.log(lat, long);
+      // console.log(lat, long);
       $scope.location = lat + ', ' + long;
 
       var leavingMS = Date.parse(midnight) + $scope.slots.epochTime * 1000;
